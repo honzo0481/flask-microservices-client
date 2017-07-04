@@ -23,11 +23,15 @@ class App extends Component {
     }
   }
   componentDidMount() {
+    console.log('componentDidMount started')
     this.getUsers()
+    console.log('componentDidMount finished')
   }
   getUsers() {
-    console.log('starting get uses')
+    console.log('getUsers started')
+    console.log('state before get: ', this.state)
     axios.get(`${process.env.REACT_APP_USERS_SERVICE_URL}/users`)
+    console.log('state after get: ', this.state)
     .then((res) => { this.setState({ users: res.data.data.users }) })
     .catch((err) => { console.log(err) })
   }
