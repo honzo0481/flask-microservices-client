@@ -19,7 +19,7 @@ const NavBar = (props) => (
         <LinkContainer to="/about">
           <NavItem eventKey={2}>About</NavItem>
         </LinkContainer>
-        <LinkContainer to="status">
+        <LinkContainer to="/status">
           <NavItem eventKey={3}>User Status</NavItem>
         </LinkContainer>
       </Nav>
@@ -27,10 +27,10 @@ const NavBar = (props) => (
         <LinkContainer to="/register">
           <NavItem eventKey={1}>Register</NavItem>
         </LinkContainer>
-        <LinkContainer to="login">
+        <LinkContainer to="/login">
           <NavItem eventKey={2}>Log In</NavItem>
         </LinkContainer>
-        <LinkContainer to="logout">
+        <LinkContainer to="/logout">
           <NavItem eventKey={3}>Log Out</NavItem>
         </LinkContainer>
       </Nav>
