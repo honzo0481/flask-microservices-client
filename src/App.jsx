@@ -5,6 +5,7 @@ import axios from 'axios'
 import UsersList from './components/UsersList'
 import AddUser from './components/AddUser'
 import About from './components/About'
+import NavBar from './components/NavBar'
 
 class App extends Component {
   constructor () {
@@ -12,7 +13,8 @@ class App extends Component {
     this.state = {
       users: [],
       username: '',
-      email: ''
+      email: '',
+      title: 'TestDriven.io'
     }
   }
   componentDidMount() {
@@ -43,6 +45,11 @@ class App extends Component {
   }
   render () {
     return (
+      <div>
+        <Navbar
+          title={this.state.title}
+        />
+      </div>
       <div className="container">
         <div classname="row">
           <div className="col-md-6">
